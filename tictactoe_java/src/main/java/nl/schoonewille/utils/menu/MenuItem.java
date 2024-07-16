@@ -9,7 +9,7 @@ public class MenuItem {
 
     public MenuItem(char key, String display, FunctionCaller function) {
         this.key = key;
-        this.display = display;
+        this.display = key + " - " + display;
         this.function = function;
     }
 

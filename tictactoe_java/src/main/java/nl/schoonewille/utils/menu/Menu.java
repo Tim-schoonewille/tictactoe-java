@@ -1,6 +1,7 @@
 package nl.schoonewille.utils.menu;
 
 import java.util.List;
+import java.util.Scanner;
 
 import nl.schoonewille.exceptions.InvalidMenuItemException;
 import nl.schoonewille.interfaces.IMenu;
@@ -32,5 +33,14 @@ public class Menu implements IMenu {
         }
         throw new InvalidMenuItemException("No menu item found.");
     }
+
+    @Override
+    public void run(Scanner scanner) {
+        while (true) {
+            displayMenu();
+            IMenu.getMenuItemFromUser(scanner, this);
+        }
+    }
+
 
 }

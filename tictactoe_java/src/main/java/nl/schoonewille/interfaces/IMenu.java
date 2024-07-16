@@ -10,6 +10,8 @@ public interface IMenu {
 
     void executeMenuItem(char menuKey) throws InvalidMenuItemException;
 
+    void run(Scanner scanner);
+
     public static void getMenuItemFromUser(Scanner scanner, IMenu menu) {
         char input;
         System.out.println("Insert your option: ");
@@ -25,4 +27,7 @@ public interface IMenu {
         }
     }
 
+    public static void notImplemented() {
+        System.out.println("Not yet implemented...");
+    }
 }
